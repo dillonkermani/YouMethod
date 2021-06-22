@@ -1,0 +1,6 @@
+framework module Pods_YouMethod {
+  umbrella header "Pods-YouMethod-umbrella.h"
+
+  export *
+  module * { export * }
+}
