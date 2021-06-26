@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DC2337CBEF3E0D4849E8FE7 /* Pods_YouMethod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB760CB5D11338DE49635A35 /* Pods_YouMethod.framework */; };
 		650B1834252F865D00521E0A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B1833252F865D00521E0A /* CustomButton.swift */; };
 		650B18392533E53C00521E0A /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B18382533E53C00521E0A /* EntryViewController.swift */; };
 		6515E489252ED6B900BC6ED2 /* MMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6515E488252ED6B900BC6ED2 /* MMenuViewController.swift */; };
@@ -25,9 +24,11 @@
 		6594996D2522816A00B29084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6594996B2522816A00B29084 /* LaunchScreen.storyboard */; };
 		65B0F53F259D518A00D38D86 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B0F53E259D518A00D38D86 /* SettingsViewController.swift */; };
 		65C2486A2554F1080007F7CB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C248692554F1080007F7CB /* SignUpViewController.swift */; };
+		AD8330862673181447674666 /* Pods_YouMethod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A094D22C8785DA507BDBE340 /* Pods_YouMethod.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23C5E5CF44229325777355E0 /* Pods-YouMethod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouMethod.debug.xcconfig"; path = "Target Support Files/Pods-YouMethod/Pods-YouMethod.debug.xcconfig"; sourceTree = "<group>"; };
 		650B1833252F865D00521E0A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		650B18382533E53C00521E0A /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		6515E488252ED6B900BC6ED2 /* MMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuViewController.swift; sourceTree = "<group>"; };
@@ -47,9 +48,8 @@
 		6594996E2522816A00B29084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65B0F53E259D518A00D38D86 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		65C248692554F1080007F7CB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		714BDDE96BC4490160DF1459 /* Pods-YouMethod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouMethod.release.xcconfig"; path = "Target Support Files/Pods-YouMethod/Pods-YouMethod.release.xcconfig"; sourceTree = "<group>"; };
-		AB760CB5D11338DE49635A35 /* Pods_YouMethod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouMethod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F95D79F8CDC554B2160F6ED0 /* Pods-YouMethod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouMethod.debug.xcconfig"; path = "Target Support Files/Pods-YouMethod/Pods-YouMethod.debug.xcconfig"; sourceTree = "<group>"; };
+		A094D22C8785DA507BDBE340 /* Pods_YouMethod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouMethod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5BC49ED520FD048A2C87AA7 /* Pods-YouMethod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouMethod.release.xcconfig"; path = "Target Support Files/Pods-YouMethod/Pods-YouMethod.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DC2337CBEF3E0D4849E8FE7 /* Pods_YouMethod.framework in Frameworks */,
+				AD8330862673181447674666 /* Pods_YouMethod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +67,8 @@
 		4CEA29D594064A0EEDA898B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F95D79F8CDC554B2160F6ED0 /* Pods-YouMethod.debug.xcconfig */,
-				714BDDE96BC4490160DF1459 /* Pods-YouMethod.release.xcconfig */,
+				23C5E5CF44229325777355E0 /* Pods-YouMethod.debug.xcconfig */,
+				C5BC49ED520FD048A2C87AA7 /* Pods-YouMethod.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -79,7 +79,7 @@
 				6594995F2522816900B29084 /* YouMethod */,
 				6594995E2522816900B29084 /* Products */,
 				4CEA29D594064A0EEDA898B3 /* Pods */,
-				6621D485663E1D7B4AE5C930 /* Frameworks */,
+				EECD76233AFD3D4A90A33DCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,10 +140,10 @@
 			path = "Project Files";
 			sourceTree = "<group>";
 		};
-		6621D485663E1D7B4AE5C930 /* Frameworks */ = {
+		EECD76233AFD3D4A90A33DCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB760CB5D11338DE49635A35 /* Pods_YouMethod.framework */,
+				A094D22C8785DA507BDBE340 /* Pods_YouMethod.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 659499712522816A00B29084 /* Build configuration list for PBXNativeTarget "YouMethod" */;
 			buildPhases = (
-				8E6B761BCD98452A30EA328F /* [CP] Check Pods Manifest.lock */,
+				727358EFB6A48431EF4113C0 /* [CP] Check Pods Manifest.lock */,
 				659499592522816900B29084 /* Sources */,
 				6594995A2522816900B29084 /* Frameworks */,
 				6594995B2522816900B29084 /* Resources */,
-				139FA9562251E1E4787C6C4E /* [CP] Embed Pods Frameworks */,
-				5E26D48EF67AD49CBDD47A48 /* [CP] Copy Pods Resources */,
+				AC20397B09CBDB04B5FB870D /* [CP] Embed Pods Frameworks */,
+				00F126238DE50D8C9E3F5A4D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,24 +218,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		139FA9562251E1E4787C6C4E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YouMethod/Pods-YouMethod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YouMethod/Pods-YouMethod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouMethod/Pods-YouMethod-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5E26D48EF67AD49CBDD47A48 /* [CP] Copy Pods Resources */ = {
+		00F126238DE50D8C9E3F5A4D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,7 +235,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouMethod/Pods-YouMethod-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E6B761BCD98452A30EA328F /* [CP] Check Pods Manifest.lock */ = {
+		727358EFB6A48431EF4113C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,6 +255,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC20397B09CBDB04B5FB870D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouMethod/Pods-YouMethod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouMethod/Pods-YouMethod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouMethod/Pods-YouMethod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -370,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,7 +437,7 @@
 		};
 		659499722522816A00B29084 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F95D79F8CDC554B2160F6ED0 /* Pods-YouMethod.debug.xcconfig */;
+			baseConfigurationReference = 23C5E5CF44229325777355E0 /* Pods-YouMethod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -449,6 +449,115 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppAuth\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"FirebaseUI\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMAppAuth\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleSignIn\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"LocalAuthentication\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SAConfettiView\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"Accelerate\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"AuthenticationServices\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DillonKermani.YouMethod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -458,7 +567,7 @@
 		};
 		659499732522816A00B29084 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 714BDDE96BC4490160DF1459 /* Pods-YouMethod.release.xcconfig */;
+			baseConfigurationReference = C5BC49ED520FD048A2C87AA7 /* Pods-YouMethod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +578,115 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppAuth\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"FirebaseUI\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMAppAuth\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleSignIn\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"LocalAuthentication\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SAConfettiView\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"Accelerate\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"AuthenticationServices\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DillonKermani.YouMethod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
