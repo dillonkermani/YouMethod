@@ -11,10 +11,12 @@ import Firebase
 // This dict will be written to the db upon completion of entry
 var entryDataDict = Dictionary<String, Any>()
 
-class EntryViewController: UIViewController {
+class EntryViewController: UIViewController, UITextViewDelegate {
     //Firestore
     var db:Firestore!
     
+    //'Super View' view controller
+    @IBOutlet var parentView: UIView!
     //Parent view controller for [entryViews]
     @IBOutlet weak var entryParentView: UIView!
     //Array of views for various entry prompts
@@ -32,11 +34,13 @@ class EntryViewController: UIViewController {
     //Outlets for entryViews[1]
     @IBOutlet weak var mentalStateStackView: UIStackView!
     //Outlets for entryViews[7]
-    @IBOutlet weak var storyTextView: UITextView!
-    
+    @IBOutlet weak var textView: UITextView!
+    var placeholderLabel : UILabel!
     //Progress circles outlets
     @IBOutlet weak var progressStackView: UIStackView!
     @IBOutlet var progressCircles: [UIButton]!
+    @IBOutlet weak var transparentButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     
     
     
@@ -44,8 +48,6 @@ class EntryViewController: UIViewController {
         super.viewDidLoad()
         //Firestore
         db = Firestore.firestore()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         hyfLabel.isHidden = true
         //Hides all views except for first entry view.
@@ -55,9 +57,26 @@ class EntryViewController: UIViewController {
         entryViews[0].isHidden = false
         //Causes entryParentView to load from left of view
         entryParentViewCenterX.constant -= view.bounds.width
+        // Set's storyTextView placeholder
+        textView.delegate = self
+        placeholderLabel = UILabel()
+        placeholderLabel.text = "What's on your mind...?"
+        placeholderLabel.font = UIFont.italicSystemFont(ofSize: (textView.font?.pointSize)!)
+        placeholderLabel.sizeToFit()
+        textView.addSubview(placeholderLabel)
+        placeholderLabel.frame.origin = CGPoint(x: 5, y: (textView.font?.pointSize)! / 2)
+        placeholderLabel.textColor = UIColor.lightGray
+        placeholderLabel.isHidden = !textView.text.isEmpty
+        
         //Initializes progressCircles as white circles
         for circle in progressCircles {
             circle.backgroundColor = UIColor.white
+            
+        // Keyboard adjustment functionality
+            let Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
+                    view.addGestureRecognizer(Tap)
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+            
         }
     }
     
@@ -75,7 +94,9 @@ class EntryViewController: UIViewController {
             
     }
     
-    
+    func textViewDidChange(_ textView: UITextView) {
+            placeholderLabel.isHidden = !textView.text.isEmpty
+        }
     
     func nextView() {
         if viewIndex < entryViews.count - 1 { //Fault tolerance for indexOutOfBounds error with viewIndex
@@ -100,30 +121,48 @@ class EntryViewController: UIViewController {
         
     }
     
-    //Actions for entryViews[7]
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize =
-            (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
-                as? NSValue)?.cgRectValue {
-            print(self.entryParentView.frame.origin.y)
-            self.entryParentView.frame.origin.y -= keyboardSize.height/2
-            storyTextView.text = ""
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        
-        if self.entryParentView.frame.origin.y != 67 {
-            self.entryParentView.frame.origin.y = 67
-            storyTextView.text = "What's on your mind?"
-        }
-    }
-    
+    // Keyboard adjust view functionality.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        self.view.endEditing(true)
-        return true
+        // Try to find next responder
+             if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+                nextField.becomeFirstResponder()
+             } else {
+                // Not found, so remove keyboard.
+                DismissKeyboard()
+             }
+             // Do not add a line break
+             return false
     }
+    //keyboard dismissal when return pressed(maybe?)
+    @IBAction func textFieldPrimaryActionTriggered(_ sender: Any) {
+        DismissKeyboard()
+    }
+
+    @objc func DismissKeyboard() {
+            keyboardIsShowing = false
+            parentView.frame.origin.y = 0
+            view.endEditing(true)
+    }
+    
+    var keyboardIsShowing = false
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if !keyboardIsShowing {
+            keyboardIsShowing = true
+            transparentButton.isHidden = false
+            if ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+                self.parentView.frame.origin.y -= (parentView.frame.height * 0.13)
+
+                }
+            }
+        }
+    
+    @IBAction func transparentButtonPressed(_ sender: Any) {
+        transparentButton.isHidden = true
+        DismissKeyboard()
+    }
+    
+    
     
     // MMenu input to database
     
@@ -234,7 +273,7 @@ class EntryViewController: UIViewController {
         entryDataDict["Aversions"] = l
         l.removeAll()
         
-        entryDataDict["Story"] = storyTextView.text!
+        entryDataDict["Story"] = textView.text!
         
         entryDataDict["Date"] = date
     }
@@ -251,5 +290,7 @@ class EntryViewController: UIViewController {
     }
     // Add all kv pairs to below document
     // db.collection("users").document((currentUser?.email)!).collection("entries").document(date).setData(["Mood":"excellent"])
+ 
     
 }
+
