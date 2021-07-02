@@ -70,21 +70,21 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.cellLabel.text = (documents[indexPath.row]["Date"] as! String)
         
         // Set cell color
-        if documents[indexPath.row]["id"] as! String == "red" {
-            cell.cellColor.tintColor = UIColor.red
-        }
-        if documents[indexPath.row]["id"] as! String == "yellow" {
-            cell.cellColor.tintColor = UIColor.yellow
-        }
-        if documents[indexPath.row]["id"] as! String == "blue" {
-            cell.cellColor.tintColor = UIColor.blue
-        }
-        if documents[indexPath.row]["id"] as! String == "green" {
-            cell.cellColor.tintColor = UIColor.green
-        }
-        if documents[indexPath.row]["id"] as! String == "purple" {
-            cell.cellColor.tintColor = UIColor.purple
-        }
+        let id = documents[indexPath.row]["id"] as! String
+        switch id {
+            case "red":
+                cell.cellColor.tintColor = UIColor.red
+            case "yellow":
+                cell.cellColor.tintColor = UIColor.yellow
+            case "blue":
+                cell.cellColor.tintColor = UIColor.blue
+            case "green":
+                cell.cellColor.tintColor = UIColor.green
+            case "purple":
+                cell.cellColor.tintColor = UIColor.purple
+            default:
+                print("Error: No color id found -> ", id)
+            }
         
         
         return cell
